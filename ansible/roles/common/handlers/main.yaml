@@ -1,0 +1,6 @@
+# Example of a handler that restarts a service
+# - name: Restart application service
+#   systemd:
+#     name: myapp
+#     state: restarted
+#   tags: [handlers]

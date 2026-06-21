@@ -1,0 +1,34 @@
+# Runtime
+backend_runtime: python3 #Runtime for the backend application
+
+# port Flask?Gunicorn will listen on
+backend_listen_port: 5000
+
+# Backend application directory
+backend_app_dir: "{{ app_base_dir }}/backend"
+
+# Python virtual environment directory for the backend application
+backend_venv_dir: "{{ backend_app_dir }}/venv"
+
+# Packages to be installed for the backend application
+backend_runtime_packages:
+  - python3-venv #Python virtual environment manager
+  - python3-pip #Python package installer for Python dependencies 
+  - postgresql-client #PostgreSQL client for database interactions
+  - python3
+
+# Database configuration for the backend application
+db_name: taskapp #Name of the PostgreSQL database
+db_user: taskapp_user #Username for the PostgreSQL database
+db_port: 5432 #Port for the PostgreSQL database
+
+# Database host will be set dynamically based on the Terraform output
+db_host: "{{ terraform_output.db_endpoint.value }}" #Database host from Terraform output
+
+db_password: "{{ vault_db_password }}" #Database password from Ansible Vault
+
+backend_repo_url: "https://github.com/ts-a-devops/taskapp_backend.git" #Git repository URL for the backend application
+backend_branch: main #Git branch for the backend application repository
+
+backend_gunicorn_workers: 3 #Number of Gunicorn worker processes for the backend application
+backend_bind_address: "0.0.0.0:5000" #Address and port for the backend application to listen on

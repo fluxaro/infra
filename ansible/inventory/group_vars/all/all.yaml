@@ -1,0 +1,15 @@
+# These are prerequisite packages that are required for frontend and backend. to run successfully. These packages will be installed on all hosts before any terraform tasks are executed.
+common_packages:
+  - curl #HTTP client for downloading files
+  - unzip #For extracting zip files
+  - git #Version control system for cloning repositories
+  - ca-certificates #SSL certificate validation
+  - gnupg #GPG signature validation
+  - acl #Access control list for managing permissions
+  - python3-pip #Python package installer for Python dependencies
+  - python3-venv #Python virtual environment manager
+
+app_user: taskapp #User that will be created on the hosts to run the application
+app_group: taskapp #Group that will be created on the hosts for the application user
+
+app_base_dir: /opt/taskapp #Base directory for the application

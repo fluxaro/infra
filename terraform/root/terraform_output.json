@@ -1,0 +1,162 @@
+{
+  "aws_availability_zones": {
+    "sensitive": false,
+    "type": [
+      "list",
+      "string"
+    ],
+    "value": [
+      "eu-north-1a",
+      "eu-north-1b",
+      "eu-north-1c"
+    ]
+  },
+  "backend_instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "i-0b43edf9391cfbc37"
+  },
+  "backend_private_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "10.0.2.83"
+  },
+  "backend_public_dns": {
+    "sensitive": false,
+    "type": "string",
+    "value": "ec2-13-48-249-82.eu-north-1.compute.amazonaws.com"
+  },
+  "backend_public_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "13.48.249.82"
+  },
+  "backend_security_group_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "sg-05956af4a1c15363d"
+  },
+  "database_security_group_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "sg-0aca59cf44adcfb3b"
+  },
+  "db_address": {
+    "sensitive": true,
+    "type": "string",
+    "value": "taskapp-phoenix-dev-db.c5uwuy4uq290.eu-north-1.rds.amazonaws.com"
+  },
+  "db_connection_string": {
+    "sensitive": true,
+    "type": "string",
+    "value": "taskapp_admin:#jKA_rAlSuRRP123!@taskapp-phoenix-dev-db.c5uwuy4uq290.eu-north-1.rds.amazonaws.com:5432/taskapp"
+  },
+  "db_endpoint": {
+    "sensitive": true,
+    "type": "string",
+    "value": "taskapp-phoenix-dev-db.c5uwuy4uq290.eu-north-1.rds.amazonaws.com:5432"
+  },
+  "db_instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "db-LOQJRE2KETW2CONHJZC6AUGYEY"
+  },
+  "db_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "taskapp"
+  },
+  "db_port": {
+    "sensitive": false,
+    "type": "number",
+    "value": 5432
+  },
+  "db_username": {
+    "sensitive": true,
+    "type": "string",
+    "value": "taskapp_admin"
+  },
+  "frontend_instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "i-07fe10d133fc6786f"
+  },
+  "frontend_private_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "10.0.1.127"
+  },
+  "frontend_public_dns": {
+    "sensitive": false,
+    "type": "string",
+    "value": "ec2-13-48-105-121.eu-north-1.compute.amazonaws.com"
+  },
+  "frontend_public_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "13.48.105.121"
+  },
+  "frontend_security_group_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "sg-05e31879d7846b395"
+  },
+  "internet_gateway_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "igw-0e9332069940f44d5"
+  },
+  "nat_gateway_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "nat-0fa7603485d3ef48d"
+  },
+  "nat_gateway_public_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "13.62.32.32"
+  },
+  "private_subnet_ids": {
+    "sensitive": false,
+    "type": [
+      "tuple",
+      [
+        "string",
+        "string"
+      ]
+    ],
+    "value": [
+      "subnet-01d8925da01dbb775",
+      "subnet-035295c6efa021437"
+    ]
+  },
+  "public_subnet_ids": {
+    "sensitive": false,
+    "type": [
+      "tuple",
+      [
+        "string",
+        "string"
+      ]
+    ],
+    "value": [
+      "subnet-01776053dc66463da",
+      "subnet-0501137388de9d0d0"
+    ]
+  },
+  "ubuntu_ami_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "ami-0eb2165c7bb585872"
+  },
+  "vpc_cidr_block": {
+    "sensitive": false,
+    "type": "string",
+    "value": "10.0.0.0/16"
+  },
+  "vpc_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "vpc-00d5f609cb9ff4fc9"
+  }
+}

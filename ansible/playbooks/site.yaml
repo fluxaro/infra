@@ -1,0 +1,22 @@
+---
+- name: Apply base configuration to all hosts
+  hosts: all
+  become: true
+  
+  roles:
+    - common
+
+- name: Configure frontend servers
+  hosts: frontend
+  become: true
+  
+  roles:
+    - frontend
+
+
+- name: Configure backend servers
+  hosts: backend
+  become: true  
+
+  roles:
+    - backend

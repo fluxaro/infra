@@ -1,0 +1,14 @@
+all:
+  vars:
+    ansible_user: ubuntu
+    ansible_ssh_private_key_file: ~/.ssh/task-app
+    ansible_python_interpreter: /usr/bin/python3
+  children:
+    frontend:
+      hosts:
+        frontend-dev:
+          ansible_host: <IP_ADDRESS>
+    backend:
+      hosts:
+        backend-dev:
+          ansible_host: <IP_ADDRESS>

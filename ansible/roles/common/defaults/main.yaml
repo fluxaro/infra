@@ -1,0 +1,6 @@
+# Fallback variables for the common role
+# These variables can be overridden by group_vars or host_vars as needed
+
+app_user: taskapp # Default application user
+app_group: taskapp # Default application group
+app_base_dir: /opt/taskapp # Default base directory for the application

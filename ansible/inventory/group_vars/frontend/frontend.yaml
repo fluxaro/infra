@@ -1,0 +1,28 @@
+# web sever packages
+
+web_server_package:
+  - nginx #Web server for serving the frontend application
+
+# Port Nginx will listen on
+frontend_listen_port: 80
+
+#Frontend application directory
+frontend_app_dir: "{{ app_base_dir }}/frontend"
+
+# Packages to be installed for the frontend application
+frontend_packages:
+  - nginx #Web server for serving the frontend application
+  - nodejs #JavaScript runtime for building the frontend application
+  - npm #Node package manager for managing frontend dependencies
+
+frontend_repo_url: "https://github.com/ts-a-devops/taskapp_frontend.git"
+frontend_branch: main #Git branch for the frontend application repository
+
+# Source directory for the frontend application code
+frontend_src_dir: "{{ app_base_dir }}/frontend"
+
+# Build output directory for the frontend application
+frontend_build_dir: "{{ frontend_src_dir }}/dist"
+
+# Nginx static files directory for the frontend application
+frontend_nginx_root: /var/www/taskapp
